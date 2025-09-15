@@ -1,0 +1,276 @@
+/* Estilos personalizados para o Sistema da Barbearia */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+.navbar-brand {
+    font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, .1);
+    border-radius: 0.375rem;
+}
+
+.sidebar .nav-link i {
+    margin-right: 0.5rem;
+}
+
+/* Cards do Dashboard */
+.border-left-primary {
+    border-left: 0.25rem solid #007bff !important;
+}
+
+.border-left-success {
+    border-left: 0.25rem solid #28a745 !important;
+}
+
+.border-left-info {
+    border-left: 0.25rem solid #17a2b8 !important;
+}
+
+.border-left-warning {
+    border-left: 0.25rem solid #ffc107 !important;
+}
+
+/* Tabelas */
+.table th {
+    border-top: none;
+    font-weight: 600;
+    color: #495057;
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+    transform: translateY(-1px);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 2rem 0 rgba(58, 59, 69, 0.2);
+}
+
+/* Modais */
+.modal-content {
+    border: none;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.modal-header .btn-close {
+    filter: invert(1);
+}
+
+/* Formulários */
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Alertas */
+.alert {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Checkboxes personalizados */
+.form-check-input:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Switch personalizado */
+.form-check-input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+/* Page content */
+.page-content {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.alert {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Text colors */
+.text-gray-800 {
+    color: #5a5c69 !important;
+}
+
+.text-gray-300 {
+    color: #dddfeb !important;
+}
+
+/* Font weights */
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+/* Utilities */
+.shadow {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important;
+}
+
+.h-100 {
+    height: 100% !important;
+}
+
+.py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Estilos para impressão */
+@media print {
+    body * { 
+        visibility: hidden; 
+    }
+    #relatorioResultado, 
+    #relatorioResultado * { 
+        visibility: visible; 
+    }
+    #relatorioResultado { 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+    }
+    .btn { 
+        display: none !important; 
+    }
+    .sidebar {
+        display: none !important;
+    }
+    .navbar {
+        display: none !important;
+    }
+}
+
+img {
+    width: 50px;       /* Ajuste o tamanho que quiser */
+    height: 50px;      /* Mantém a proporção quadrada */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
+    object-fit: cover;  /* Garante que a imagem preencha o círculo */
+}
+
